@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Login Authentication</title>
+    <link rel="stylesheet" href="Login_Authentication.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="register-form" style="display: none;">
+            <h2>Welcome to Basic Login Authentication</h2>
+            <h3>Register</h3>
+            <input type="email" id="reg-email" placeholder="Enter email">
+            <input type="text" id="reg-username" placeholder="Enter username">
+            <input type="password" id="reg-password" placeholder="Enter password">
+            <input type="password" id="confirm-password" placeholder="Confirm password">
+            <button onclick="registerUser()">Register</button>
+            <p id="reg-message"></p>
+            <p>Already registered? <span onclick="showLoginForm()">Login here</span></p>
+        </div>
+        <div id="login-form">
+            <h2>Welcome to Basic Login Authentication</h2>
+            <h3>Login</h3>
+            <input type="text" id="login-username" placeholder="Enter username">
+            <input type="password" id="login-password" placeholder="Enter password">
+            <button onclick="loginUser()">Login</button>
+            <p id="message"></p>
+            <p>Not registered? <span onclick="showRegisterForm()">Register here</span></p>
+        </div>
+        <div id="welcome-container" style="display: none;">
+            <h2>Welcome to our Website</h2>
+            <p>Hello! You have successfully logged in. Welcome to our website.</p>
+            <button onclick="goBackToLogin()">Back to Login</button>
+        </div>
+    </div>
+    <script src="Login_Authentication.js"></script>
+</body>
+
+</html>
